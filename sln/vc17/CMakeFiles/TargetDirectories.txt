@@ -1,0 +1,6 @@
+C:/Users/Руслан/Desktop/mp2-lab1-set/sln/vc17/CMakeFiles/ALL_BUILD.dir
+C:/Users/Руслан/Desktop/mp2-lab1-set/sln/vc17/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Руслан/Desktop/mp2-lab1-set/sln/vc17/src/CMakeFiles/set.dir
+C:/Users/Руслан/Desktop/mp2-lab1-set/sln/vc17/samples/CMakeFiles/sample_prime_numbers.dir
+C:/Users/Руслан/Desktop/mp2-lab1-set/sln/vc17/gtest/CMakeFiles/gtest.dir
+C:/Users/Руслан/Desktop/mp2-lab1-set/sln/vc17/test/CMakeFiles/test_set.dir

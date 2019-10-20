@@ -61,18 +61,22 @@ TSet& TSet::operator=(const TSet &s) // присваивание
 
 int TSet::operator==(const TSet &s) const // сравнение
 {
-		return BitField == s.BitField;
+	if ((BitField.operator==(s.BitField) == 1) ||
+		(MaxPower == s.MaxPower)) return 1;
+	return 0;
 }
 
 int TSet::operator!=(const TSet &s) const // сравнение
 {
 
-		return BitField != s.BitField;
+	if ((BitField.operator!=(s.BitField) == 1) ||
+		(MaxPower != s.MaxPower)) return 1;
+	return 0;
 }
 
 TSet TSet::operator+(const TSet &s) // объединение
 {
-	TSet tmp(BitField | s.BitField);
+	TSet tmp(this->BitField | s.BitField);
 	return tmp;
 }
 
@@ -92,9 +96,16 @@ TSet TSet::operator-(const int Elem) // разность с элементом
 
 TSet TSet::operator*(const TSet &s) // пересечение
 {
-	TSet tmp(BitField);
-	tmp.BitField = tmp.BitField & s.BitField;
-	return tmp;
+	if (this->MaxPower >= s.MaxPower) {
+		TSet tmp(BitField);
+		tmp.BitField = tmp.BitField & s.BitField;
+		return tmp;
+	}
+	else {
+		TSet tmp(s.BitField);
+		tmp.BitField = tmp.BitField & this->BitField;
+		return tmp;
+	}
 }
 
 TSet TSet::operator~(void) // дополнение
